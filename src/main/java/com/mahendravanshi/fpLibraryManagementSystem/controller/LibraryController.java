@@ -1,5 +1,4 @@
 package com.mahendravanshi.fpLibraryManagementSystem.controller;
-
 import com.mahendravanshi.fpLibraryManagementSystem.entity.Library;
 import com.mahendravanshi.fpLibraryManagementSystem.service.LibraryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ public class LibraryController {
         return new ResponseEntity<>(libraryService.addLibrary(library), HttpStatus.OK);
     }
 
-    @GetMapping("/{library_id")
+    @GetMapping("/{library_id}")
     public ResponseEntity<Library> getLibraryById(@PathVariable Integer library_id){
         return new ResponseEntity<>(libraryService.getLibraryById(library_id),HttpStatus.OK);
     }
@@ -33,8 +32,8 @@ public class LibraryController {
     }
 
 
-    @DeleteMapping("/{library_id")
-    public ResponseEntity<Library> deleteLibrary(@PathVariable Integer library_id){
+    @DeleteMapping("/{library_id}")
+    public ResponseEntity<Library> deleteLibrary(@PathVariable Integer library_id) {
          return new ResponseEntity<>(libraryService.deleteLibrary(library_id),HttpStatus.OK);
     }
 
